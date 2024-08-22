@@ -1,6 +1,6 @@
-# sapproducts
+# PDP content provider
 
-Welcome to my Adobe I/O Application!
+PDP content provider for aem.live projects using the Markup mountpoint
 
 ## Setup
 
