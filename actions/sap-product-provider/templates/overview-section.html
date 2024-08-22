@@ -1,0 +1,33 @@
+<h2>Overview</h2>
+<div class="product-overview">
+  <div>
+    <div>
+      {{#each (filter content.0.features "type" "benefit")}}
+      <h3>{{headline}}</h3>
+      <p>{{text}}</p>
+      {{/each}}
+    </div>
+    <div>
+      <h3>Details</h3>
+      <h4>Solution type</h4>
+      {{#each attributes.0.solutionTypes}}
+      <p>{{name}}</p>
+      {{/each}}
+      {{#if attributes.0.industries}}
+      <h4>Industry</h4>
+      {{#each attributes.0.industries }}
+      <p>{{name}}</p>
+      {{/each}}
+      {{/if}}
+      <h3>Compatibility</h3>
+      {{#if commercial.0.worksWith}}
+      <h4>Works with</h4>
+      <ul>
+        {{#each commercial.0.worksWith }}
+        <li>{{textualPrerequisites.0.text}}</li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </div>
+  </div>
+</div>

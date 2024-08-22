@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{productName}}</title>
+  <meta name="description" content="{{content.0.description.large}}">
+  {{#if metaKeywords }}
+  <meta name="keywords" content="{{metaKeywords}}">
+  {{/if}}
+  {{#with metadata}}
+  <meta name="published-time" content="{{0.createdAt}}">
+  <meta name="modified-time" content="{{0.lastModifiedDate}}">
+  {{/with}}
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <div>
+      {{> hero-block }}
+      {{> overview-section }}
+      {{> reviews-section }}
+      {{> resources-section }}
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

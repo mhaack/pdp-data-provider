@@ -1,0 +1,11 @@
+{{#if content.0.resources }}
+<h2>Resources</h2>
+<div class="list-external">
+  {{#each content.0.resources}}
+  <div>
+    <div>{{this.text}}</div>
+    <div><a href="{{this.value}}">{{cardLinks this.type}}</a></div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}

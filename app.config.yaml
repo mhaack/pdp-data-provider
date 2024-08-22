@@ -1,0 +1,26 @@
+application:
+  actions: actions
+  runtimeManifest:
+    packages:
+      sap-product-provider:
+        license: Apache-2.0
+        actions:
+          data:
+            function: actions/sap-product-provider/index.js
+            web: 'yes'
+            runtime: nodejs:18
+            inputs:
+              LOG_LEVEL: debug
+              API_ENDPOINT: https://api.p1.services.store.net.sap/v3/products
+              OVERLAY_PATHS:
+                - /products
+              TEMPLATES:
+                - page
+                - hero-block
+                - overview-section
+                - reviews-section
+                - resources-section
+            annotations:
+              final: true
+            include:
+              - ["actions/sap-product-provider/templates/*.html", "templates/"]    
