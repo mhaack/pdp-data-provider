@@ -21,12 +21,14 @@
       {{/if}}
       <h3>Compatibility</h3>
       {{#if commercial.0.worksWith}}
+      {{#if commercial.0.worksWith.textualPrerequisites}}
       <h4>Works with</h4>
       <ul>
         {{#each commercial.0.worksWith }}
         <li>{{textualPrerequisites.0.text}}</li>
         {{/each}}
       </ul>
+      {{/if}}
       {{/if}}
     </div>
   </div>
